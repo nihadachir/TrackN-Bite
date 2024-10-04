@@ -1,0 +1,160 @@
+# Author: Dhaval Patel. Codebasics YouTube Channel
+
+Default Welcome Intent
+======================
+Text response:  Hello, How can I help you? You can say "New Order" or "Track Order"
+				Good day! What can I do for you today? You can say "New Order" or "Track Order"
+				Greetings! How can I assist? You can say "New Order" or "Track Order"
+
+				
+Default Fallback Intent
+========================
+Text Response: I didn't understand. You can say 'New Order' or 'Track Order'. Also, in a new order, please mention only items from our available menu: Pav Bhaji, Chole Bhature, Pizza, Mango Lassi, Masala Dosa, Biryani, Vada Pav, Rava Dosa, and Samosa. Also specify a quantity for each item for example: "One pizza and 2 chole bhature"				
+
+
+Intent= new.order
+=================
+Place a new order
+Start a new order
+Submit a new order
+Initiate a new order
+Create an order
+Make a new order
+Generate a new order
+Order creation
+Open a new order
+Launch a new order
+
+	Text Response = 
+Starting a new order. Specify food items and quantities. For example, you can say, "I would like to order two chicken tagines and one mint tea." Also, we have only the following items on our menu:
+Tagine (chicken, lamb, or vegetable)
+Couscous (lamb, chicken, or vegetable)
+Harira Soup
+Pastilla (chicken or seafood)
+Zaalouk
+Mechoui
+Briouat
+Mint Tea
+Baklava.
+
+Intent= order.add -context:ongoing-order
+==========================================
+"I'd like to order a tagine, please."
+"Can I get a couscous with lamb?"
+"I want to add a pastilla to my order."
+"Please add a harira soup to my order."
+"I'd like to order a chicken tagine with olives."
+"Add a serving of zaalouk to my order."
+"Can I have a mint tea with my meal?"
+"I want to add a side of briouat."
+"Please add two kefta skewers to my order."
+"I'd like to add a baklava for dessert."
+"Can I get a vegetable couscous?"
+"Add a royal couscous to my order."
+"Please include a serving of mechoui."
+"I want to order msemen with honey."
+"Can you add a Moroccan salad to my order?"
+
+Intent= order.complete-context:ongoing-order
+==========================================
+Nope
+That's all I needed
+Done ordering it
+Place an order
+Done
+That's it
+
+Intent= order.remove-context:ongoing-order
+==========================================
+Please remove the chicken tagine from my order."
+"Can you take the baklava off my order?"
+"I’d like to cancel the couscous with lamb."
+"Remove the harira soup, please."
+"Take the vegetable tagine out of my order."
+"Cancel the mint tea from my order."
+"Can I remove the pastilla from my order?"
+"I want to delete the briouat from my order."
+"Please take off the lamb mechoui."
+"Remove one chicken tagine from my order."
+"Cancel the zaalouk I added earlier."
+"Can you take the seafood pastilla off my list?"
+"I’d like to remove the couscous with chicken."
+"Delete the mint tea from my order."
+"I changed my mind, remove the baklava."
+
+
+Intent= track.order
+===================
+
+check the status of my order
+track order
+track existing order
+
+Text response:
+	Definitely. What is your order id?
+	Sure. Please enter your order id.
+	Definitely. What is your order id?
+
+
+Intent= track.order - context: ongoing-tracking
+==================================================
+how about 32
+how about 40?
+here it is - 63321
+here you go: 123
+here is my order number 675
+id is 453
+here is my order id # 341
+entities:food-item:1. Tagine
+Tajine
+Moroccan stew
+Chicken tagine
+Lamb tagine
+Vegetable tagine
+Meat stew
+2. Couscous
+Moroccan couscous
+Steamed couscous
+Couscous with lamb
+Couscous with chicken
+Vegetable couscous
+3. Harira Soup
+Harira
+Moroccan soup
+Lentil soup
+Tomato soup
+Chickpea soup
+4. Pastilla
+Bastilla
+Moroccan pie
+Chicken pastilla
+Seafood pastilla
+Moroccan pastry
+5. Zaalouk
+Eggplant dip
+Moroccan eggplant salad
+Roasted eggplant dish
+Aubergine dip
+6. Mechoui
+Roast lamb
+Grilled lamb
+Moroccan barbecue
+Lamb roast
+7. Briouat
+Briwat
+Moroccan stuffed pastry
+Stuffed pastry
+Fried pastry
+8. Mint Tea
+Moroccan tea
+Sweet mint tea
+Hot mint tea
+Maghrebi tea
+9. Baklava
+Moroccan baklava
+Honey pastry
+Nut pastry
+Sweet pastry
+7890
+123
+345
